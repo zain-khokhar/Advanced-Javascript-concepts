@@ -1,14 +1,14 @@
-"use strict";
-// non data type strict example
-// you must delclare variable data type before use
-  const x = 3;
- console.log(x);
+// call method example
+// call method is used to call a function with a given this value and arguments provided individually.
+// here we are using call method to inherit the properties of product function to food function
+function product(name , price){
+    this.name = name;
+    this.price = price;
+}
+function food(name , price){
+    product.call(this , name , price);
+    this.category = "food";
 
- // function this example 
- // In the global context (outside of any function), 'this' refers to the global object (window in browsers, global in Node.js).
- // In a regular function, 'this' refers to the global object (or undefined in strict mode).
- // In an arrow function, 'this' retains the value of the enclosing lexical context's 'this'.
- function myfunction(){
-    console.log(this);
- }
- myfunction(); 
+}
+const item = new food("cheese", 5);
+console.log(item.name);
