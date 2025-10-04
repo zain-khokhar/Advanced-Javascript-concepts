@@ -11,4 +11,3 @@ function food(name , price){
 
 }
 const item = new food("cheese", 5);
-console.log(item.name);
