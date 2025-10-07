@@ -26,4 +26,8 @@ class reactangle {
 
 const square = new reactangle(10,8);
 console.log(square.area);
-console.log([...square.getSides()]);
+const sides = [...square.getSides()];
+console.log(sides);
+console.log(typeof sides); // object
+console.log(typeof square); // object
+console.log(square instanceof reactangle); // true
