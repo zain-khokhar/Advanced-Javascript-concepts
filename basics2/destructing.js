@@ -36,4 +36,10 @@ const user = {
 };
 
 const {address:{one:{work}}} = user;
-console.log(work);
+// console.log(work);
+
+//  change property name of objects
+
+const {id:identity,contact:number} = user;
+console.log(user.contact);
+console.log(number);
