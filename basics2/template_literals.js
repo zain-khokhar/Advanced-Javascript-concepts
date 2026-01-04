@@ -9,14 +9,15 @@ const obj = {
 obj.callName();
 
 // inject variables inside the another backticks
-function hello(name){
- console.log(this);   
-    return name;
+function hello(){
+    const a = 5;
+    const b = 9
+ console.log(`${a} , ${`${9}`}`)
 }
 
-// console.log(hello("zain"));
+hello();
 
 const Obj = {
-   name:`${console.log(this)}`
+//    name:`${console.log(this)}`
 }
-console.log(Obj.name)
+// console.log(Obj.name)
