@@ -66,4 +66,4 @@ function desFunc({name}){
   console.log(name)
 }
 
-desFunc(user);
+desFunc(user); // define the object which key name used in params
