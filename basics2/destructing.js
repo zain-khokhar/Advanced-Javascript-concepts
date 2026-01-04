@@ -43,3 +43,12 @@ const {address:{one:{work}}} = user;
 const {id:identity,contact:number} = user;
 console.log(user.contact);
 console.log(number);
+
+// understanding with Default Values
+
+const user1 = {
+  id: 1,
+  name: "Ali"
+}
+const {pass ="jakj33989"} = user1;
+console.log(pass);
