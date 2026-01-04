@@ -52,3 +52,10 @@ const user1 = {
 }
 const {pass ="jakj33989"} = user1;
 console.log(pass);
+
+// binding in object destructing 
+
+let abc ;
+
+({abc} = {abc:5});
+console.log(abc);
