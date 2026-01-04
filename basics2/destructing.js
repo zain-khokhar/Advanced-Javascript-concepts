@@ -59,3 +59,11 @@ let abc ;
 
 ({abc} = {abc:5});
 console.log(abc);
+
+// destructing use in  Function Parameters 
+
+function desFunc({name}){
+  console.log(name)
+}
+
+desFunc(user);
