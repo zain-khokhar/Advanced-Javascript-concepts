@@ -21,3 +21,17 @@ function Sum(x,y,z){
 }
 
 console.log(Sum(...sumArr.flat())) ;
+
+// merge the objects 
+
+const Obj = {name:'john', age:5,name:"khalid"};
+const Obj1 = {name:'foo', age:9};
+
+const mergeObj = {...Obj,...Obj1};
+console.log(mergeObj);
+
+// conditional adding 
+
+const name = false;
+const array = ['ali' , 'zain', ...name ? ['hassan']: ['amjad']]
+console.log(array);
