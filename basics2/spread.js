@@ -14,18 +14,10 @@ const newUser = {
   skills: [...user.skills, "JavaScript"]
 };
 // console.log(user.skills , newUser.skills);
+const sumArr = [1,5,[8]];
 
-// more tricky problem for spread operators
-const profile = {
-  name: "Zain",
-  projects: [
-    { title: "Portfolio", tech: ["HTML", "CSS"] },
-    { title: "App", tech: ["JS", "React"] }
-  ]
-};
-
-const newProf = {
-    ...profile,
-    
+function Sum(x,y,z){
+  return x+y+z ;
 }
-// console.log(newProf);
+
+console.log(Sum(...sumArr.flat())) ;
