@@ -1,6 +1,7 @@
 // concept of rest operator 
-function myFun(...manyMoreArgs) {
-  console.log("manyMoreArgs", manyMoreArgs);
+const alpha = function(a,b,c,...argus){
+const splitarr = argus.reduce((sum , v)=> sum + v ,0);
+console.log(a+b+c+splitarr);
 }
 
-myFun("one", "two", "three", "four", "five", "six");
+alpha(34,232,3,23,2,23,32)
