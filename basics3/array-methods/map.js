@@ -7,7 +7,7 @@ const students = [
 ];
 
 const studentsWithGrades = students.map(student => {
-  // Use map to iterate and sum marks (no reduce or other loops)
+  // Use map to iterate and sum marks 
   let sum = 0;
   student.marks.map(mark => {
     sum += mark;
