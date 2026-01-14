@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show"></div>
+<button id="start">start</button>
+<button id="stop">stop</button>
+    <script>
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
+const show = document.querySelector('#show');
+let startInterval;
+start.addEventListener("click",()=>{
+    startInterval=  setInterval(()=>{
+        
+        const  Dated = Date.now();
+        const normalDate =new Date().toLocaleString('en-PK', { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute:'2-digit', second:'2-digit' });
+
+            show.innerHTML=` hello zain ${normalDate}`;
+},1000)
+})
+
+stop.addEventListener('click',()=>{
+clearInterval(startInterval)
+show.innerHTML= ''
+})
+    </script>
+</body>
+</html>
