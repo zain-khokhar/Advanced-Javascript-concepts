@@ -21,9 +21,16 @@ async function fetchAll() {
     if (result.status === 'fulfilled') {
       console.log(`Request ${i+1} success:`, result.value);
     } else {
-      console.log(`Request ${i+1} failed:`, result.reason);
     }
   });
 }
 
 fetchAll();
+
+async function demo() {
+  console.log("Start");
+  await new Promise(resolve => setTimeout(resolve, 2000)); // 2 sec wait
+  console.log("After await"); // Ye tab print hoga jab promise resolve ho jaye
+}
+
+demo();

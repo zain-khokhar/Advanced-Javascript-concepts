@@ -1,3 +1,4 @@
+
 // Fetch data from the provided URL
 async function fetchData(url) {
   const response = await fetch(url);
@@ -10,7 +11,7 @@ async function processUsers() {
     // Get users and filter by email domain
     const users = await fetchData('https://jsonplaceholder.typicode.com/users');
     const filtered = users.filter(user => user.email.endsWith('.org'));
-    // console.log('Filtered Users:', filtered);
+     console.log('Filtered Users:', users.map((x)=> x.email));
   } catch (error) {
     console.error('Error:', error.message);
   }
